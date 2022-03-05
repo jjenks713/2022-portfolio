@@ -38,7 +38,7 @@ export default function Home() {
 
                 Information seeking, dedicated, eager to learn, just a few things that define Josh Jenkin. I am here to improve; myself, your business, your products. With a firm grasp on Front End Development, I would be an asset to any company. With my extensive Managerial and customer service knowledge, my skills easily translate to create the best customer UI imaginable.<br /><br />
 
-                Click the links of my Portfolio to find out more about the work I've done and more about me!<br /><br />
+                Click the links of my Portfolio to find out more about the work I have done and more about me!<br /><br />
                 </Typography>
                 <ul className='flex justify-evenly'>
                   <li>
