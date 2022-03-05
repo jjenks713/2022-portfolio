@@ -18,9 +18,8 @@ export default function Javascript() {
     
 
   return (
-      <div className='grid justify-center'>
-        <Box sx={{ width: 1000, height: 450}}>
-        <ImageList variant="masonry" cols={3} gap={8}>
+    <div className='flex flex-col justify-center items-center'>
+        <Box className='p-10 justify-center masonry sm:masonry-sm md:masonry-md lg:masonry-lg'>
             {itemData.map((item) => (
                 <>
 
@@ -90,7 +89,6 @@ export default function Javascript() {
                 }
                 </>
             ))}
-        </ImageList>
         </Box>
       </div>
   );

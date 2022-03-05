@@ -50,11 +50,7 @@ export default function Navigator() {
                 <Link href="/">
                 <a
                 onClick={handleToggle}
-                className={isActive ?
-                "px-3 py-2 flex items-center text-md uppercase font-bold leading-snug text-black hover:opacity-75"
-                : 
-                "px-3 py-2 flex items-center text-md uppercase font-bold leading-snug text-white bg-gray-600 hover:opacity-75"
-                }>
+                className="px-3 py-2 flex items-center text-md uppercase font-bold leading-snug text-black hover:opacity-75">
                   About
                 </a>
                 </Link>

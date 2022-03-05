@@ -18,82 +18,80 @@ export default function ReactFunction() {
     
 
     return (
-        <div className='grid justify-center'>
-          <Box sx={{ width: 1000, height: 450}}>
-          <ImageList variant="masonry" cols={3} gap={8}>
-              {itemData.map((item) => (
-                  <>
-  
-                  {isActive ? 
-                      <ImageListItem key={item.img}>
-                      <a //eslint-disable-line
-                      href={item.link} 
-                      target="_blank">
-                      <img //eslint-disable-line
-                      src={`${item.img}?w=248&fit=crop&auto=format`}
-                      srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                      alt={item.title}
-                      loading="lazy"
-                      />
-                      </a>
-                      <ImageListItemBar
-                      title={item.title}
-                      subtitle={item.description}
-                      actionIcon={
-                      <IconButton
-                          sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
-                          aria-label={`info about ${item.description}`}
-                          id={item.title}
-                          onClick={handleToggle}
-                      >
-                          <InfoIcon />
-                      </IconButton>
-                      }
-                      />
-                      </ImageListItem>
-                  : 
-                      <ImageListItem key={item.img} className="relative">
-                      <a //eslint-disable-line
-                      href={item.link} 
-                      target="_blank">
-                      <img //eslint-disable-line
-                      className='opacity-20'
-                      src={`${item.img}?w=248&fit=crop&auto=format`}
-                      srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                      alt={item.title}
-                      loading="lazy"
-                      />
-                      <div
-                      className='absolute top-0 flex bg-transparent bg-cover text-black text-lg text-center'
-                      
-                      ><p>{item.description}</p></div>
-                      </a>
-                      <ImageListItemBar
-                          sx={{
-                              background:
-                              'linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, ' +
-                              'rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)',
-                          }}
-                          title={item.title}
-                          actionIcon={
-                              <IconButton
-                              sx={{ color: 'white' }}
-                              aria-label={`star ${item.title}`}
-                              onClick={handleToggle}
-  
-                              >
-                              <InfoIcon />
-                              </IconButton>
-                          }
-                          />
-                      </ImageListItem>
-                  }
-                  </>
-              ))}
-          </ImageList>
-          </Box>
-        </div>
-    );
+        <div className='flex flex-col justify-center items-center'>
+            <Box className='p-10 justify-center masonry sm:masonry-sm md:masonry-md lg:masonry-lg'>
+                {itemData.map((item) => (
+                    <>
+    
+                    {isActive ? 
+                        <ImageListItem key={item.img}>
+                        <a //eslint-disable-line
+                        href={item.link} 
+                        target="_blank">
+                        <img //eslint-disable-line
+                        src={`${item.img}?w=248&fit=crop&auto=format`}
+                        srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                        alt={item.title}
+                        loading="lazy"
+                        />
+                        </a>
+                        <ImageListItemBar
+                        title={item.title}
+                        subtitle={item.description}
+                        actionIcon={
+                        <IconButton
+                            sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
+                            aria-label={`info about ${item.description}`}
+                            id={item.title}
+                            onClick={handleToggle}
+                        >
+                            <InfoIcon />
+                        </IconButton>
+                        }
+                        />
+                        </ImageListItem>
+                    : 
+                        <ImageListItem key={item.img} className="relative">
+                        <a //eslint-disable-line
+                        href={item.link} 
+                        target="_blank">
+                        <img //eslint-disable-line
+                        className='opacity-20'
+                        src={`${item.img}?w=248&fit=crop&auto=format`}
+                        srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                        alt={item.title}
+                        loading="lazy"
+                        />
+                        <div
+                        className='absolute top-0 flex bg-transparent bg-cover text-black text-lg text-center'
+                        
+                        ><p>{item.description}</p></div>
+                        </a>
+                        <ImageListItemBar
+                            sx={{
+                                background:
+                                'linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, ' +
+                                'rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)',
+                            }}
+                            title={item.title}
+                            actionIcon={
+                                <IconButton
+                                sx={{ color: 'white' }}
+                                aria-label={`star ${item.title}`}
+                                onClick={handleToggle}
+    
+                                >
+                                <InfoIcon />
+                                </IconButton>
+                            }
+                            />
+                        </ImageListItem>
+                    }
+                    </>
+                ))}
+            </Box>
+          </div>
+      );
 }
 
 const itemData = [
