@@ -29,6 +29,7 @@ export default function Javascript() {
                     href={item.link} 
                     target="_blank">
                     <img //eslint-disable-line
+                    className='drop-shadow-2xl rounded'
                     src={`${item.img}?w=248&fit=crop&auto=format`}
                     srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
                     alt={item.title}
@@ -56,14 +57,14 @@ export default function Javascript() {
                     href={item.link} 
                     target="_blank">
                     <img //eslint-disable-line
-                    className='opacity-20'
+                    className='opacity-20 drop-shadow-2xl rounded'
                     src={`${item.img}?w=248&fit=crop&auto=format`}
                     srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
                     alt={item.title}
                     loading="lazy"
                     />
                     <div
-                    className='absolute top-0 flex bg-transparent bg-cover text-black text-lg text-center'
+                    className='absolute top-0 flex bg-transparent bg-cover text-black text-lg text-center font-bold'
                     
                     ><p>{item.description}</p></div>
                     </a>
