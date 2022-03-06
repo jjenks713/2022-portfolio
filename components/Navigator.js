@@ -53,7 +53,6 @@ export default function Navigator() {
             <li className="nav-item">
                 <Link href="/">
                 <a
-                onClick={handleToggle}
                 className="px-3 py-2 flex items-center text-md uppercase font-bold leading-snug text-black hover:opacity-75">
                   About
                 </a>
