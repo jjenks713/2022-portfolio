@@ -18,7 +18,7 @@ export default function ReactFunction() {
     
 
     return (
-        <div className='flex flex-col justify-center items-center'>
+        <div className='bg-gray-600 flex flex-col justify-center items-center'>
             <Box className='p-10 justify-center masonry sm:masonry-sm md:masonry-md lg:masonry-lg'>
                 {itemData.map((item) => (
                     <>
