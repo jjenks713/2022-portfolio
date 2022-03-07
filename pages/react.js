@@ -96,17 +96,17 @@ export default function ReactFunction() {
 }
 
 const itemData = [
-{
-    img: '/images/self-port.jpg',
-    title: 'Creepy but Cute Press',
-    link: "https://cbcp-next.vercel.app/",
-    description: "Website for small business using HTML, CSS, Bootstrap, javascript, React, Next.js, sendMail, Google Cloud Run"
-  },
   {
     img: '/images/logo-dark.png',
     title: 'Samplified',
     link: "https://samplified-next.vercel.app/",
     description: "Full stack sample sharing app using React, Next.js, MongoDB, AWS, MUI, Tailwind, Vercel"
+  },
+  {
+    img: '/images/self-port.jpg',
+    title: 'Creepy but Cute Press',
+    link: "https://cbcp-next.vercel.app/",
+    description: "Website for small business using HTML, CSS, Bootstrap, javascript, React, Next.js, sendMail, Google Cloud Run"
   },
     {
     img: '/images/rick.jpg',
