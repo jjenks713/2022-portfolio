@@ -8,7 +8,7 @@ import InfoIcon from '@mui/icons-material/Info';
 import { useState } from 'react'
 
 
-export default function ReactFunction() {
+export default function Javascript() {
 
     const [isActive, setActive] = useState("false");
 
@@ -17,82 +17,85 @@ export default function ReactFunction() {
     };
     
 
-    return (
-        <div className='bg-gray-600 flex flex-col justify-center items-center'>
-            <Box className='p-10 justify-center masonry sm:masonry-sm md:masonry-md lg:masonry-lg'>
-                {itemData.map((item) => (
-                    <>
-    
-                    {isActive ? 
-                        <ImageListItem key={item.img}>
-                        <a //eslint-disable-line
-                        href={item.link} 
-                        target="_blank">
-                        <img //eslint-disable-line
-                        className='drop-shadow-2xl rounded'
-                        src={`${item.img}?w=248&fit=crop&auto=format`}
-                        srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                        alt={item.title}
-                        loading="lazy"
-                        />
-                        </a>
-                        <ImageListItemBar
+  return (
+    <div className='bg-gray-600 py-10 sm:py-24 px-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 justify-center'>
+            {itemData.map((item) => (
+                <>
+
+                {isActive ? 
+                  <div className='h-96'>
+                    <ImageListItem key={item.img}>
+                    <a //eslint-disable-line
+                    href={item.link} 
+                    target="_blank">
+                    <img //eslint-disable-line
+                    className='drop-shadow-2xl rounded h-96'
+                    src={`${item.img}?w=248&fit=crop&auto=format`}
+                    srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                    alt={item.title}
+                    loading="lazy"
+                    />
+                    </a>
+                    <ImageListItemBar
+                    title={item.title}
+                    subtitle={item.description}
+                    actionIcon={
+                    <IconButton
+                        sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
+                        aria-label={`info about ${item.description}`}
+                        id={item.title}
+                        onClick={handleToggle}
+                    >
+                        <InfoIcon />
+                    </IconButton>
+                    }
+                    />
+                    </ImageListItem>
+                  </div>
+                : 
+                <div className='h-96'>
+                    <ImageListItem key={item.img} className="relative">
+                    <a //eslint-disable-line
+                    href={item.link} 
+                    target="_blank">
+                    <img //eslint-disable-line
+                    className='opacity-20 drop-shadow-2xl rounded h-96'
+                    src={`${item.img}?w=248&fit=crop&auto=format`}
+                    srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                    alt={item.title}
+                    loading="lazy"
+                    />
+                    <div
+                    className='absolute top-0 flex bg-transparent bg-cover text-black text-lg text-center font-bold'
+                    
+                    ><p>{item.description}</p></div>
+                    </a>
+                    <ImageListItemBar
+                        sx={{
+                            background:
+                            'linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, ' +
+                            'rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)',
+                        }}
                         title={item.title}
-                        subtitle={item.description}
                         actionIcon={
-                        <IconButton
-                            sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
-                            aria-label={`info about ${item.description}`}
-                            id={item.title}
+                            <IconButton
+                            sx={{ color: 'white' }}
+                            aria-label={`star ${item.title}`}
                             onClick={handleToggle}
-                        >
+
+                            >
                             <InfoIcon />
-                        </IconButton>
+                            </IconButton>
                         }
                         />
-                        </ImageListItem>
-                    : 
-                        <ImageListItem key={item.img} className="relative">
-                        <a //eslint-disable-line
-                        href={item.link} 
-                        target="_blank">
-                        <img //eslint-disable-line
-                        className='opacity-20 drop-shadow-2xl rounded'
-                        src={`${item.img}?w=248&fit=crop&auto=format`}
-                        srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                        alt={item.title}
-                        loading="lazy"
-                        />
-                        <div
-                        className='absolute top-0 flex bg-transparent bg-cover text-black text-lg text-center font-bold'
-                        
-                        ><p>{item.description}</p></div>
-                        </a>
-                        <ImageListItemBar
-                            sx={{
-                                background:
-                                'linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, ' +
-                                'rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)',
-                            }}
-                            title={item.title}
-                            actionIcon={
-                                <IconButton
-                                sx={{ color: 'white' }}
-                                aria-label={`star ${item.title}`}
-                                onClick={handleToggle}
-    
-                                >
-                                <InfoIcon />
-                                </IconButton>
-                            }
-                            />
-                        </ImageListItem>
-                    }
-                    </>
-                ))}
-            </Box>
-          </div>
-      );
+                    </ImageListItem>
+                </div>
+
+                }
+                </>
+            ))}
+      </div>
+  );
 }
 
 const itemData = [
@@ -126,4 +129,5 @@ const itemData = [
     link: "https://self-aware-santa.herokuapp.com/#/",
     description: "Vue.js application to create and manage secret santa lists. This uses Vue and MongoDB"
   },
+  
 ]
