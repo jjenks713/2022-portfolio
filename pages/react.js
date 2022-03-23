@@ -18,18 +18,18 @@ export default function Javascript() {
     
 
   return (
-    <div className='bg-gray-600 py-10 sm:py-24 px-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 justify-center'>
+    <div className='bg-gray-600 py-10 px-0 sm:py-24 sm:px-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 justify-center'>
             {itemData.map((item) => (
                 <>
 
                 {isActive ? 
-                  <div className='h-96'>
+                  <div className='h-72 sm:h-96 grid justify-center'>
                     <ImageListItem key={item.img}>
                     <a //eslint-disable-line
                     href={item.link} 
                     target="_blank">
                     <img //eslint-disable-line
-                    className='drop-shadow-2xl rounded h-96'
+                    className='drop-shadow-2xl rounded h-72 sm:h-96'
                     src={`${item.img}?w=248&fit=crop&auto=format`}
                     srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
                     alt={item.title}
@@ -53,13 +53,13 @@ export default function Javascript() {
                     </ImageListItem>
                   </div>
                 : 
-                <div className='h-96'>
+                <div className='h-72 sm:h-96 grid justify-center'>
                     <ImageListItem key={item.img} className="relative">
                     <a //eslint-disable-line
                     href={item.link} 
                     target="_blank">
                     <img //eslint-disable-line
-                    className='opacity-20 drop-shadow-2xl rounded h-96'
+                    className='opacity-20 drop-shadow-2xl rounded h-72 sm:h-96'
                     src={`${item.img}?w=248&fit=crop&auto=format`}
                     srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
                     alt={item.title}
