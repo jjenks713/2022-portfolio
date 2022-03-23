@@ -74,7 +74,7 @@ export default function Navigator() {
                 <a
                 className="px-3 py-2 flex items-center text-md uppercase font-bold leading-snug text-black hover:opacity-75"
                 >
-                  React/Vue
+                  React/Nextjs
                 </a>
                 </Link>
               </li>
