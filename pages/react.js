@@ -100,7 +100,7 @@ export default function Javascript() {
 
 const itemData = [
   {
-    img: '/images/logo-dark.png',
+    img: '/images/logo-large.svg',
     title: 'Samplified',
     link: "https://samplified-next.vercel.app/",
     description: "Full stack sample sharing app using React, Next.js, MongoDB, AWS, MUI, Tailwind, Vercel"
